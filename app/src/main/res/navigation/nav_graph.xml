@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/fragment1">
+
+    <fragment android:id="@+id/fragment1" android:name="fausto.app.com.navigationhellof.Fragment1"
+              android:label="fragment_fragment1" tools:layout="@layout/fragment_fragment1">
+        <action android:id="@+id/action_fragment1_to_fragment2" app:destination="@id/fragment2"/>
+        <action android:id="@+id/action_fragment1_to_main2Activity" app:destination="@id/main2Activity"/>
+    </fragment>
+    <fragment android:id="@+id/fragment2" android:name="fausto.app.com.navigationhellof.Fragment2"
+              android:label="fragment_fragment2" tools:layout="@layout/fragment_fragment2">
+        <argument android:name="name" app:argType="string" android:defaultValue="Fausto"/>
+    </fragment>
+    <activity android:id="@+id/main2Activity" android:name="fausto.app.com.navigationhellof.Main2Activity"
+              android:label="activity_main2" tools:layout="@layout/activity_main2"/>
+</navigation>
